@@ -28,8 +28,8 @@ export default [
     {
       question: "Qual das alternativas possui a sintaxe correta de um objeto?",
       answers: [
-        { option: "var objeto = { nome completo: 'Bob', idade: 25 };", correct: false },
-        { option: "var objeto = { nome: 'Alice', idade 30; };", correct: false },
+        { option: "var pessoa = { nome completo: 'Bob', idade: 25 };", correct: false },
+        { option: "var pessoa = { nome: 'Alice', idade 30; };", correct: false },
         { option: "var pessoa = { nome: 'João', idade: 37 };", correct: true },
       ],
     },

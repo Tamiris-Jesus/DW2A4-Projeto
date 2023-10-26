@@ -31,10 +31,11 @@ body h2{
     font-size: 45px;
     padding-bottom: 20px;
     transition: 0.2s all;
+    text-decoration: underline;
 }
 
 body h2:hover{
-    text-decoration: underline;
+    
 }
 
 main{
@@ -42,7 +43,7 @@ main{
     padding: 10px;
     border-radius: 10px;
     width: 100%;
-    max-width: 500px;
+    max-width: 750px;
     min-height: 200px;
     display: flex;
     align-items: center;

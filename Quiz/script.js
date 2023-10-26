@@ -21,13 +21,21 @@ btnRestart.onclick = () => {
 };
 
 function nextQuestion(e) {
+  const selectedButton = e.target;
+
   if (e.target.getAttribute("data-correct") === "true") {
+    selectedButton.style.backgroundColor = "green";
     questionsCorrect++;
+  } else{
+    selectedButton.style.backgroundColor = "red";
   }
 
   if (currentIndex < questions.length - 1) {
     currentIndex++;
-    loadQuestion();
+    
+    setTimeout(() => {
+      loadQuestion();
+    }, 1000); 
   } else {
     finish();
   }
@@ -60,6 +68,12 @@ function loadQuestion() {
   document.querySelectorAll(".answer").forEach((item) => {
     item.addEventListener("click", nextQuestion);
   });
+}
+
+function correctAnswer(){
+  if(answers == true){
+    
+  }
 }
 
 loadQuestion();
