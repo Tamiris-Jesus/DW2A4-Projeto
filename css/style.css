@@ -1,0 +1,151 @@
+
+/* Estilos globais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para os botões de navegação */
+.buttons {
+    background-color: #0074d9; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.buttons2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+/* img{
+    height: 110px;
+    height: 110px;
+} */
+
+/* Estilização da imagem do jogo */
+.image-container {
+    position: relative;
+    display: flex;
+}
+
+.game-image {
+    max-width: 100%;
+    height: auto;
+    transition: opacity 0.3s;
+    width: 150px; /* Defina a largura desejada */
+}
+
+/* Estilização do overlay (efeito de transparência e texto) */
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 116, 217, 0.7); /* Cor de fundo com transparência */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.overlay-text {
+    color: #fff;
+    font-size: 20px;
+}
+
+/* Estilização do botão */
+.game-button {
+    background-color: #0074d9;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 10px auto;
+}
+
+.game-button:hover {
+    background-color: #0056b3;
+}
+
+/* Efeito de hover para mostrar o overlay e tornar a imagem um pouco transparente */
+.game-link:hover .game-image {
+    opacity: 0.7;
+}
+
+.game-link:hover .image-overlay {
+    opacity: 1;
+}
+
+
+
+
+.buttons2 button {
+    height: 40px;
+    height: 40px;
+    font-size: 18px;
+}
+
+.buttons a {
+    text-decoration: none;
+    margin: 10px;
+}
+
+.buttons2 a {
+    text-decoration: none;
+    margin: 10px;
+}
+
+.buttons button {
+    height: 50px;
+    height: 50px;
+    font-size: 18px;
+    background-color: #0056b3; 
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buttons button:hover {
+    background-color: #003f80; 
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: #0074d9; 
+}
+
+p{
+    font-size: 24px;
+    text-align: center;
+}
+
+
+/* Estilos para os botões nas páginas individuais */
+a button {
+    background-color: #0056b3; 
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 10px auto;
+}
+
+a button:hover {
+    background-color: #003f80; 
+}

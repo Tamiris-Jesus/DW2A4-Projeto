@@ -1,33 +1,23 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <link rel="shortcut icon" href="/icon.png">
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-route.min.js"></script>
+    <script src="./app.js"></script>
+    <link rel="shortcut icon" href="./img/icon.png">
+    <link rel="stylesheet" href="./css/style.css" />
     <title>Site de Jogos</title>
 
-</head>
-<body>
+  </head>
+  <body ng-app="App">
     <div class="buttons">
-        <a href="./JogoDaMemoria/index.html">
-            <button>Jogo da memória</button>
-        </a>
-    
-        <a href="./Quiz/index.html">
-            <button>Quiz</button>
-        </a>
-    
-        <a href="./Pokedex/index.html">
-            <button>Pokedex</button>
-        </a>
-
-        <a href="./Jogo da Velha/index.html">
-            <button>Jogo da velha</button>
-        </a>
-
+      <a href="#/"><button>Bem vindo</button></a>
+      <a href="#/estrategia"><button>Jogos de Estratégia</button> </a>
+      <a href="#/tecnologia"><button>Jogos de Tecnologia</button></a>
+      <a href="#/diversos"><button>Diversos</button></a>
     </div>
-    
 
-</body>
+    <div ng-view></div>
+  </body>
 </html>
