@@ -29,7 +29,7 @@ body h2{
     color: rgb(34,34,34);
     font-weight: bold;
     font-size: 45px;
-    padding-bottom: 20px;
+    padding-bottom: 35px;
     transition: 0.2s all;
     text-decoration: underline;
 }
@@ -43,7 +43,7 @@ main{
     padding: 10px;
     border-radius: 10px;
     width: 100%;
-    max-width: 750px;
+    max-width: 950px;
     min-height: 200px;
     display: flex;
     align-items: center;
@@ -97,5 +97,11 @@ button:hover {
   
   .finish button {
     text-align: center;
+  }
+
+  /*RANKING*/
+
+  .ranking{
+    display: none;
   }
 

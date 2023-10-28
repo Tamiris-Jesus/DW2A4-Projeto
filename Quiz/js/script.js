@@ -7,6 +7,10 @@ const textFinish = document.querySelector(".finish span");
 const content = document.querySelector(".content");
 const contentFinish = document.querySelector(".finish");
 const btnRestart = document.querySelector(".finish button");
+const timer = document.querySelector('.timer');
+export let players = []; // Lista de jogadores
+
+import { showRanking } from "../../JogoDaMemoria/js/ranking.js";
 
 let currentIndex = 0;
 let questionsCorrect = 0;
@@ -17,10 +21,13 @@ btnRestart.onclick = () => {
 
   currentIndex = 0;
   questionsCorrect = 0;
-  loadQuestion();
+  //window.location = '../index.html';
+  endQuiz();
 };
 
+
 function nextQuestion(e) {
+  
   const selectedButton = e.target;
 
   if (e.target.getAttribute("data-correct") === "true") {
@@ -70,10 +77,20 @@ function loadQuestion() {
   });
 }
 
-function correctAnswer(){
-  if(answers == true){
-    
-  }
+// Função para iniciar o temporizador
+const startTimer = (loop) => {
+  loop = setInterval(() => {
+     const currentTime = +timer.innerHTML;
+     timer.innerHTML = currentTime + 1;
+   }, 1000);
+ };
+
+function endQuiz (){
+  const ranking = document.querySelector("./ranking");
+  ranking = ranking.className.style.display = "flex"; 
+  showRanking();
 }
 
+
 loadQuestion();
+startTimer();
