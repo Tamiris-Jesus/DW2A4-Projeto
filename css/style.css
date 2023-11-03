@@ -1,20 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
 
 /* Estilos globais */
 body {
-    font-family: Arial, sans-serif;
+    /* font-family: Arial, sans-serif; */
+    font-family: 'Poppins', sans-serif;
     background-color: #f0f0f0;
     margin: 0;
     padding: 0;
+    background-image: url("../img/fundo1.png");
+    background-size: cover;
 }
 
 /* Estilos para os botões de navegação */
 .buttons {
-    background-color: #0074d9; 
+    /* background-color: #0074d9;  */
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px;
 }
+
+/* Estilos para a div quadrada */
+.square {
+    width: 150px; /* Defina a largura desejada */
+    height: 150px; /* Defina a altura desejada para criar um quadrado */
+    border-radius: 40px; /* Adicione cantos arredondados ajustando o valor conforme necessário */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0074d9; /* Cor de fundo para a div */
+    margin-left: 30px;
+}
+
+
+/* Estilização da imagem do jogo dentro da div quadrada */
+.square p {
+    font-size: 20px;
+    color: white;
+}
+
+/* .square .game-image {
+    max-width: 100%;
+    height: auto;
+    transition: opacity 0.3s;
+    width: 100%;
+} */
+
 
 .buttons2 {
     display: flex;
@@ -34,13 +67,6 @@ body {
     display: flex;
 }
 
-.game-image {
-    max-width: 100%;
-    height: auto;
-    transition: opacity 0.3s;
-    width: 150px; /* Defina a largura desejada */
-}
-
 /* Estilização do overlay (efeito de transparência e texto) */
 .image-overlay {
     position: absolute;
@@ -54,7 +80,7 @@ body {
     align-items: center;
     justify-content: center;
     opacity: 0;
-    transition: opacity 0.3s;
+    transition: opacity 0.1s;
 }
 
 .overlay-text {
@@ -86,8 +112,6 @@ body {
 .game-link:hover .image-overlay {
     opacity: 1;
 }
-
-
 
 
 .buttons2 button {
@@ -122,15 +146,22 @@ body {
     background-color: #003f80; 
 }
 
+#titulo{
+    color: #e7eaee; 
+}
+
 h1 {
     text-align: center;
     margin-top: 20px;
-    color: #0074d9; 
+    color: #0a8dff; 
+    font-weight: 400;
 }
 
 p{
     font-size: 24px;
     text-align: center;
+    color: #e7eaee; 
+
 }
 
 
