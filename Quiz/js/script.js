@@ -10,7 +10,7 @@ const btnRestart = document.querySelector(".finish button");
 const timer = document.querySelector('.timer');
 export let players = []; // Lista de jogadores
 
-import { showRanking } from "../../JogoDaMemoria/js/ranking.js";
+
 
 let currentIndex = 0;
 let questionsCorrect = 0;
@@ -21,7 +21,7 @@ btnRestart.onclick = () => {
 
   currentIndex = 0;
   questionsCorrect = 0;
-  //window.location = '../index.html';
+  window.location = '../index.html';
   endQuiz();
 };
 
@@ -31,7 +31,7 @@ function nextQuestion(e) {
   const selectedButton = e.target;
 
   if (e.target.getAttribute("data-correct") === "true") {
-    selectedButton.style.backgroundColor = "green";
+    selectedButton.style.backgroundColor = "limegreen";
     questionsCorrect++;
   } else{
     selectedButton.style.backgroundColor = "red";
@@ -49,7 +49,11 @@ function nextQuestion(e) {
 }
 
 function finish() {
-  textFinish.innerHTML = `você acertou ${questionsCorrect} de ${questions.length}`;
+  pararTemporizador();
+  endTime = Date.now();
+  totalTime = Math.floor((endTime - startTime) / 1000);
+
+  textFinish.innerHTML = `você acertou ${questionsCorrect} de ${questions.length} \n em ${totalTime} segundos`;  
   content.style.display = "none";
   contentFinish.style.display = "flex";
 }
@@ -77,20 +81,22 @@ function loadQuestion() {
   });
 }
 
+let startTime;
+let endTime;
+let totalTime;
+
 // Função para iniciar o temporizador
 const startTimer = (loop) => {
+  startTime = Date.now();
   loop = setInterval(() => {
-     const currentTime = +timer.innerHTML;
-     timer.innerHTML = currentTime + 1;
-   }, 1000);
+    const currentTime = Math.floor((Date.now() - startTime) / 1000);
+    timer.innerHTML = currentTime;
+  }, 1000);
  };
 
-function endQuiz (){
-  const ranking = document.querySelector("./ranking");
-  ranking = ranking.className.style.display = "flex"; 
-  showRanking();
-}
-
+var pararTemporizador = (loop) => {
+  clearInterval(loop);
+} 
 
 loadQuestion();
 startTimer();
