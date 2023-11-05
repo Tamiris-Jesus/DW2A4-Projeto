@@ -87,6 +87,11 @@ button{
 
 }
 
+.info{
+  margin-top: 30px;
+  text-decoration: none;
+  color: #3b394e;
+}
 
 @-webkit-keyframes button {
   to {
