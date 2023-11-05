@@ -10,6 +10,7 @@ const buttonNext = document.querySelector('.btn-next');
 
 let searchPokemon = 1; /*A busca dos pokemons inicia com o 1*/
 
+// Uso do FETCH 
 const fetchPokemon = async (pokemon) => { /*recebe o nome de um pokemon como argumento*/
   const APIResponse = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`); /*busca esse pokemon na api pokéAPI*/
 
