@@ -75,37 +75,3 @@ export const checkCards = () => {
       }, 500);
     }
   };
-
-//   // Função para verificar se o jogo foi concluído
-// export const checkEndGame = () => {
-//     const disabledCards = document.querySelectorAll('.disabled-card');
-//     if (disabledCards.length === 20) {
-//       clearInterval(loop); // Limpa o intervalo do temporizador
-//       alert(`Parabéns, ${spanPlayer.innerHTML}! Você zerou o jogo. Seu tempo foi: ${timer.innerHTML} segundos`);
-//       endGameMenu();
-//       localStorage.setItem('playerTime', timer.innerHTML);
-//       localStorage.setItem('playerName', spanPlayer.innerHTML);
-//     }
-//   };
-
-//   // Função para exibir o menu de fim de jogo
-// const endGameMenu = () => {
-//     const container = document.querySelector('.container');
-//     container.style.display = 'flex'; // Exibe o container do jogo
-  
-//     const restartBtn = document.querySelector('.restart-btn');
-//     const homeBtn = document.querySelector('.home-btn');
-  
-//     restartBtn.addEventListener('click', () => {
-//       restartGame();
-//     });
-//     homeBtn.addEventListener('click', () => {
-//       goToHomePage();
-//     });
-  
-//     const playerName = spanPlayer.innerHTML;
-//     const playerTime = timer.innerHTML;
-//     players.push({ name: playerName, time: playerTime });
-//     localStorage.setItem('players', JSON.stringify(players));
-//     showRanking();
-//   };
