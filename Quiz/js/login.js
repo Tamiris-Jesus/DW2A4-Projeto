@@ -17,11 +17,11 @@ const validateInput = ({ target }) => {
 const handleSubmit = (event) => {
   event.preventDefault();
 
-  localStorage.setItem('player', input.value);
+  // localStorage.setItem('player', input.value);
   window.location = 'pages/index.html';
 }
 
 
-input.addEventListener('input', validateInput);
+// input.addEventListener('input', validateInput);
 form.addEventListener('submit', handleSubmit);
 
