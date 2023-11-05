@@ -1,3 +1,5 @@
+var scriptState = {};
+
 (function(){
 
     var canva = document.querySelector("canvas");
@@ -13,7 +15,7 @@
     // armazena as dimensões de captura da imagem
     var tileSrcSize = 96;
 
-    var imagem = new Image();
+    var imagem = new Image()
         imagem.src = "./img/img.png";
         imagem.addEventListener("load", function(){
             requestAnimationFrame(loop,canva); // a chamada do disparo do jogo só vai ser feita depois de concluir o carregamento da imagem
