@@ -25,8 +25,8 @@ body {
 
 /* Estilos para a div quadrada */
 .square {
-    width: 150px; /* Defina a largura desejada */
-    height: 150px; /* Defina a altura desejada para criar um quadrado */
+    width: 170px; /* Defina a largura desejada */
+    height: 170px; /* Defina a altura desejada para criar um quadrado */
     border-radius: 40px; /* Adicione cantos arredondados ajustando o valor conforme necessário */
     display: flex;
     justify-content: center;
